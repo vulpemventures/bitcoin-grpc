@@ -1,0 +1,19 @@
+// Copyright 2018 Vulpem Ventures.
+syntax = "proto3";
+
+package bitcoin;
+
+// Interface exported by the server.
+service Bitcoin {
+  // A simple RPC.
+  rpc GetBlockchainInfo(Request) returns (Reply);
+
+}
+
+message Request {
+  string blob = 1;
+}
+
+message Reply {
+  string blob = 1;
+}
